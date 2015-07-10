@@ -13,8 +13,6 @@ var player_Score = 'player1_Score'
 //tiles from HTML
 var boardEl = $('.tiles');
 console.log (boardEl);
-//determines whether game is being played or not
-var game_on = "true";
 //initial score to be updated
 var player1_Score = 0;
 var player2_Score = 0;
