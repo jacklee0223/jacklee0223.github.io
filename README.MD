@@ -14,7 +14,7 @@ The game ends when all the cards on the board have been flipped, and the player 
 HTML, CSS, Javascript, Jquery, SASS
 
 ##Design Philosophy 
-Based on Soul Calibur Franchise, the theme is the epic struggle between Soul Calibur (embodiment of good) and Soul Edge (embodiment of evil).
+Based on Soul Calibur Franchise, the theme is the epic struggle between Soul Calibur (sword that is embodiment of good) and Soul Edge (sword that is embodiment of evil).
 
 ##Installation instructions
 Follow the link:
