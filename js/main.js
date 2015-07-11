@@ -77,12 +77,12 @@ function changeTurn() {
   if (currentPlayer == 'player1') {
     currentPlayer = 'player2';
     player_Score = 'player2_Score';
-    setTimeout(function() {$('.arrow').css('background-image', 'url(css/img/compassR.png)');}, 1000);
+    setTimeout(function() {$('.arrow').css('background-image', 'url(css/img/compassR.png)');}, 500);
     console.log('player2')
   } else {
      currentPlayer = 'player1';
      player_Score = 'player1_Score';
-     setTimeout(function() {$('.arrow').css('background-image', 'url(css/img/compassL.png)');}, 1000);
+     setTimeout(function() {$('.arrow').css('background-image', 'url(css/img/compassL.png)');}, 500);
      console.log('player1')
   }
 }
@@ -114,18 +114,18 @@ function match() {
       $('.tiles').attr('disabled', 'disabled');
       setTimeout(function() {
       $('.tiles').removeAttr('disabled');
-      }, 1000);
+      }, 500);
       changeTurn();
     } else if (memory_values[0] !== memory_values[1]){
       console.log('no match');
       matchStore = "unmatched";
-      setTimeout(flipBack, 1000);
+      setTimeout(flipBack, 500);
       tiles_flipped-=2;
       memory_values = [];
       $('.tiles').attr('disabled', 'disabled');
       setTimeout(function() {
       $('.tiles').removeAttr('disabled');
-      }, 1000);
+      }, 500);
       changeTurn();
     }
   } else if(currentPlayer === 'player2') {
@@ -142,18 +142,18 @@ function match() {
       $('.tiles').attr('disabled', 'disabled');
       setTimeout(function() {
       $('.tiles').removeAttr('disabled');
-      }, 1000);
+      }, 500);
       changeTurn();
     } else if (memory_values[0] !== memory_values[1]){
       console.log('no match');
       matchStore = "unmatched";
-      setTimeout(flipBack, 1000);
+      setTimeout(flipBack, 500);
       tiles_flipped-=2;
       memory_values = [];
       $('.tiles').attr('disabled', 'disabled');
       setTimeout(function() {
       $('.tiles').removeAttr('disabled');
-      }, 1000);
+      }, 500);
       changeTurn();
     }
   }
@@ -164,7 +164,7 @@ function match() {
   function reset(){
     for(var i = 0; i < boardEl.length; i++) {
       shuffle(board);
-      setTimeout(function() {$('.tilesF').removeClass().addClass('tiles').css('background-image', 'url(css/img/scb.png)');}, 1000);
+      setTimeout(function() {$('.tilesF').removeClass().addClass('tiles').css('background-image', 'url(css/img/scb.png)');}, 500);
       tiles_flipped = 0;
       player1_Score = 0;
       player2_Score = 0;
