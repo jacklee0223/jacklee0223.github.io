@@ -22,8 +22,6 @@ var winner = '';
 var matchStore = '';
 //Stores last 2 clicked IDs
 var id_memory = [];
-//check if game is on (used for un/clickable function)
-var gameOn = true;
 
 //shuffle images
 
@@ -50,21 +48,23 @@ var shuffled_board = shuffle(board);
 //Event Listener (For Loop)
 
 var userClicksCard = function(event) {
+  // get the index of the clicked card
   var idx = parseInt(this.id);
-  if($(this).hasClass('tilesF')) {
-    return;
-    console.log('rejected')
-  } else if($(this).hasClass('tiles')) {
-    $(this).removeClass().addClass('tilesF')
-    $(this).css('background-image', "url(css/img/sc" + shuffled_board[idx] + ".png" + ")");
-    console.log('card flipped up');
-    tiles_flipped ++;
-    memory_values.push(shuffled_board[idx]);
-    id_memory.push(this.id);
-    match();
-    getWinner();
 
-  }
+  // show the image associated with this card
+  $(this).css('background-image', "url(css/img/sc" + shuffled_board[idx] + ".png" + ")");
+  console.log('card flipped up');
+  tiles_flipped ++;
+
+  // update values
+  memory_values.push(shuffled_board[idx]);
+  id_memory.push(this.id);
+
+  // check if there is a match
+  match();
+
+ // check if there is a winner
+  getWinner();
 };
 
 for(var i = 0; i < boardEl.length; i++) {
@@ -87,16 +87,14 @@ function changeTurn() {
   }
 }
 
-
 //card flipback mechanism to be used for setTimeout within match()
 function flipBack() {
 
-  $('#'+id_memory[0]).removeAttr('style').removeClass().addClass('tiles');
-  $('#'+id_memory[1]).removeAttr('style').removeClass().addClass('tiles');
+  $('#'+id_memory[0]).removeAttr('style');
+  $('#'+id_memory[1]).removeAttr('style');
   id_memory = [];
   console.log('flipback happened')
 };
-
 
 //check if there is any match
 function match() {
@@ -111,21 +109,14 @@ function match() {
       $('#player1_Score').html(player1_Score);
       memory_values = [];
       id_memory = [];
-      $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 1000);
       changeTurn();
     } else if (memory_values[0] !== memory_values[1]){
       console.log('no match');
       matchStore = "unmatched";
       setTimeout(flipBack, 1000);
+      // window.setTimeout(function() { alert('test'), 5000});
       tiles_flipped-=2;
       memory_values = [];
-      $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 1000);
       changeTurn();
     }
   } else if(currentPlayer === 'player2') {
@@ -139,21 +130,13 @@ function match() {
       $('#player2_Score').html(player2_Score);
       memory_values = [];
       id_memory = [];
-      $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 1000);
       changeTurn();
     } else if (memory_values[0] !== memory_values[1]){
       console.log('no match');
-      matchStore = "unmatched";
-      setTimeout(flipBack, 1000);
+      matchStore = 'unmatched';
       tiles_flipped-=2;
+      setTimeout(flipBack, 1000);
       memory_values = [];
-      $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 1000);
       changeTurn();
     }
   }
@@ -164,7 +147,7 @@ function match() {
   function reset(){
     for(var i = 0; i < boardEl.length; i++) {
       shuffle(board);
-      setTimeout(function() {$('.tilesF').css('background-image', 'url(css/img/scb.png)');}, 1000);
+      setTimeout(function() {$('.tiles').css('background-image', 'url(css/img/scb.png)');}, 1000);
       tiles_flipped = 0;
       player1_Score = 0;
       player2_Score = 0;
