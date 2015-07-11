@@ -22,8 +22,6 @@ var winner = '';
 var matchStore = '';
 //Stores last 2 clicked IDs
 var id_memory = [];
-//check if game is on (used for un/clickable function)
-var gameOn = true;
 
 //shuffle images
 
