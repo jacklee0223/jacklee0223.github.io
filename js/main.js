@@ -164,7 +164,7 @@ function match() {
   function reset(){
     for(var i = 0; i < boardEl.length; i++) {
       shuffle(board);
-      setTimeout(function() {$('.tilesF').removeClass().addClass('tiles').css('background-image', 'url(css/img/scb.png)');}, 500);
+      setTimeout(function() {$('.tilesF').removeClass().addClass('tiles').css('background-image', 'url(css/img/scb.png)');}, 1000);
       tiles_flipped = 0;
       player1_Score = 0;
       player2_Score = 0;
