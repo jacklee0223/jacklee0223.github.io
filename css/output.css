@@ -64,7 +64,8 @@ body {
     margin-top: 25px; }
     .scorecard #player1 #player1_Score {
       color: #0066CC;
-      text-shadow: none; }
+      text-shadow: none;
+      font-size: 80px; }
   .scorecard #player2 {
     font-size: 40px;
     width: 200px;
@@ -75,7 +76,8 @@ body {
     margin-top: 25px; }
     .scorecard #player2 #player2_Score {
       color: #990000;
-      text-shadow: none; }
+      text-shadow: none;
+      font-size: 80px; }
   .scorecard .arrow {
     background-image: url("img/compassL.png");
     background-size: cover;
