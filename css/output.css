@@ -1,6 +1,23 @@
+@font-face {
+  font-family: scFont;
+  src: url(scfont.ttf); }
+@font-face {
+  font-family: scFont3;
+  src: url(scfont3.ttf); }
 body {
   background-image: url("img/scback.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: scFont; }
+
+.titlePage {
+  height: 100px;
+  margin: 0px 0px 0px 330px;
+  width: 785px;
+  text-align: center;
+  font-size: 100px;
+  color: #800000;
+  text-shadow: 5px 5px black; }
 
 .memoryBoard {
   height: 540px;
@@ -32,43 +49,45 @@ body {
 
 .scorecard {
   display: inline-flex;
-  height: 200px;
+  height: 150px;
   width: 600px;
   margin: 0px 0px 0px 430px; }
+  .scorecard p {
+    margin: 0px; }
   .scorecard #player1 {
-    font-size: 30px;
+    font-size: 40px;
     width: 200px;
     height: 100px;
-    color: blue;
     text-align: center;
-    font-family: fantasy; }
+    color: white;
+    text-shadow: 2px 2px #0066CC;
+    margin-top: 25px; }
+    .scorecard #player1 #player1_Score {
+      color: #0066CC;
+      text-shadow: none; }
   .scorecard #player2 {
-    font-size: 30px;
+    font-size: 40px;
     width: 200px;
-    height: 200px;
-    color: red;
+    height: 100px;
     text-align: center;
-    font-family: fantasy; }
+    color: white;
+    text-shadow: 2px 2px #990000;
+    margin-top: 25px; }
+    .scorecard #player2 #player2_Score {
+      color: #990000;
+      text-shadow: none; }
   .scorecard .arrow {
     background-image: url("img/compassL.png");
     background-size: cover;
-    width: 200px;
-    height: 200px; }
-
-.player1Current {
-  background-color: #3399FF;
-  opacity: 0.9; }
-
-.player2Current {
-  background-color: #990099;
-  opacity: 0.9; }
+    width: 200px; }
 
 #playlist, audio {
   background: #666;
   width: 400px;
   padding: 20px;
   margin: 0px 30px 0px 510px;
-  opacity: 0.7; }
+  opacity: 0.7;
+  font-family: scFont3; }
 
 li a {
   color: #eeeedd;

@@ -108,9 +108,7 @@ function match() {
       memory_values = [];
       id_memory = [];
       $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 500);
+      setTimeout(function() {$('.tiles').removeAttr('disabled');}, 500);
       changeTurn();
     } else if (memory_values[0] !== memory_values[1]){
       console.log('no match');
@@ -119,9 +117,7 @@ function match() {
       tiles_flipped-=2;
       memory_values = [];
       $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 500);
+      setTimeout(function() {$('.tiles').removeAttr('disabled');}, 500);
       changeTurn();
     }
   } else if(currentPlayer === 'player2') {
@@ -136,9 +132,7 @@ function match() {
       memory_values = [];
       id_memory = [];
       $('.tiles').attr('disabled', 'disabled');
-      setTimeout(function() {
-      $('.tiles').removeAttr('disabled');
-      }, 500);
+      setTimeout(function() {$('.tiles').removeAttr('disabled');}, 500);
       changeTurn();
     } else if (memory_values[0] !== memory_values[1]){
       console.log('no match');
