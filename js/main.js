@@ -1,23 +1,21 @@
 console.log('main.js connected')
 
-//stores shuffled_board[idx] when clicking tiles
-var memory_values = [];
-//counts how many tiles are flipped
-var tiles_flipped = 0;
-//empty board to be shuffled
+//board vars
 var board = ['1','1','2','2','3','3','4','4','5','5','6','6','7','7','8','8','9','9'];
-//current player1/2 to be changed after each turn
-var currentPlayer = 'player1'
-//keep track of score for each
-var player_Score = 'player1_Score'
-//tiles from HTML
 var boardEl = $('.tiles');
 console.log (boardEl);
-//initial score to be updated
+
+//player/score vars
+var currentPlayer = 'player1'
+var player_Score = 'player1_Score'
 var player1_Score = 0;
 var player2_Score = 0;
-//winner to be updated
+var tiles_flipped = 0;
+
+//empty vars
 var winner = '';
+//stores shuffled_board[idx] when clicking tiles
+var memory_values = [];
 //Stores current matched or unmatched information
 var matchStore = '';
 //Stores last 2 clicked IDs
