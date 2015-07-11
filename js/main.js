@@ -204,6 +204,8 @@ var audio;
 var playlist;
 var tracks;
 var current;
+var shuffled_playlist = shuffle($('#playlist'))
+
 
 init();
 function init(){
