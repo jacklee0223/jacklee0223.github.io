@@ -201,7 +201,7 @@ function init(){
     audio = $('#audio');
     playlist = $('#playlist');
     tracks = playlist.find('li a');
-    len = tracks.length - 1;
+    len = tracks.length;
     audio[0].volume = 1;
     audio[0].play();
     playlist.find('a').click(function(e){

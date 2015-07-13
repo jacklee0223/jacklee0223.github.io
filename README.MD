@@ -7,7 +7,7 @@ Along the board, there will be exactly 2 of each unique cards and a player gains
 
 Per each turn, a player can flip 2 cards. If a card is matched, it will stay flipped up. If unmatched, the card will flip back. 
 
-The game ends when all the cards on the board have been flipped, and the player with the most points win.
+The game ends when all the cards on the board have been flipped, and the player with the most points wins.
 
 
 ##Technologies Used 
@@ -20,7 +20,7 @@ Based on Soul Calibur Franchise, the theme is the epic struggle between Soul Cal
 Follow the link:
 http://jacklee0223.github.io/
 
-May require Javascript plugin
+May require installing Javascript plugin
 
 ##User Stories
 
@@ -60,4 +60,4 @@ May require Javascript plugin
 
 1. Card is still registering tiles_flipped, id_memory even after it has been flipped, resulting in player change after two consecutive clicks on the same tile <b>FIXED</b> 
 2. Another card is clickable after second click <b>FIXED</b>
-3. The last piece on the music list doesn't play <b>fixed..but lame solution</b>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+3. The last piece on the music list doesn't play <b>FIXED</b>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
