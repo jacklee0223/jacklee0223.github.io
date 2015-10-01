@@ -194,11 +194,11 @@ var audio;
 var playlist;
 var tracks;
 var current;
-// var ul = document.querySelector('ul');
-// for (var i = ul.children.length; i >= 0; i--) {
-//   ul.appendChild(ul.children[Math.random() * i | 0]);
-// }
-//   $("#audio").find("source").attr("src", $("ul li:first-child a").attr("href"));
+var ul = document.querySelector('ul');
+for (var i = ul.children.length; i >= 0; i--) {
+  ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+  $("#audio").find("source").attr("src", $("ul li:first-child a").attr("href"));
 
 
 init();
